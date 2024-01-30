@@ -1,0 +1,13 @@
+# Makefile.in
+CC = @CC@
+CFLAGS = @CFLAGS@
+LDFLAGS = @LDFLAGS@
+EXECUTABLE = hello
+
+all: $(EXECUTABLE)
+
+$(EXECUTABLE): hello.c
+	$(CC) $(CFLAGS) $(LDFLAGS) -o $(EXECUTABLE) hello.c
+
+clean:
+	rm -f $(EXECUTABLE)
